@@ -1,6 +1,6 @@
 # Research Scout Agent
 
-An AI research assistant that searches for academic papers based on user constraints such as topic, publication year, and citation count. Built with AutoGen and the OpenAlex API.
+An AI research assistant that searches for academic papers based on user constraints such as topic, publication year, and citation count. Built with AutoGen and the OpenAlex API, using Mistral's open-mistral-nemo as the reasoning model.
 
 ## Setup
 
@@ -51,11 +51,13 @@ Results will be saved in evaluation_results.json.
 
 ## How it works
 
-1. The user submits their choice of the 2 predefined prompts. A detailed search which takes more parameters and a quick search that helps finding a paper fitting a specific user but without any other parameters such as publishing year and citations.
-2. The AutoGen AssistantAgent extracts constraints (e.g. topic, min. citations)
-3. The agent calls the `search_papers` tool with those constraints
-4. The tool queries the OpenAlex API and filters results deterministically
-5. The agent selects the most relevant paper and returns a structured answer
+1. The user submits their choice of the 2 predefined prompts whereafter the user specifies the parameters such as topic, minimum citations.
+A detailed search which takes more parameters and a quick search that helps finding a paper fitting a specific user but without any other parameters such as publishing year and citations.
+2. The CLI collects constraints from the user (topic, year, min. citations) and formats them into a prompt string, which is passed to the AutoGen AssistantAgent.
+The agent is implemented as an AutoGen two-agent loop: an AssistantAgent (ResearchScout) decides when and how to call the tool, while a UserProxyAgent executes the tool call and checks whether the response satisfies the termination condition.
+3. The agent calls the `search_papers` tool with the constraints.
+4. The tool queries the OpenAlex API and filters results deterministically.
+5. The agent selects the most relevant paper and returns a structured answer.
 
 ## Evaluation results
 
@@ -67,7 +69,7 @@ For each test the conclusion notes whether the agent found a relevant paper, res
 
 | # | Topic | When | Min cit. | Type | Result | Conclusion |
 |---|-------|------|----------|------|--------|------------|
-| 1 | Geology | before 2020 | 200 | Broad | ✅ Pass | Returned *The Continental Crust* (1985, 11123 cit.). Directly about geology, all constraints met. |
+| 1 | Geology | before 2020 | 200 | Broad | ⚠️ Partial | Returned *The Continental Crust* (1985, 11123 cit.). Directly about geology, all constraints met. No link was provided however. |
 | 2 | Keynesian Economics | before 2026 | 50 | Narrow | ⚠️ Partial | Returned *The Affluent Society* (1958, 1981 cit.). Constraints met but the book addresses post-scarcity economics broadly, not Keynesian theory specifically. |
 | 3 | Computer vision object detection | after 2022 | 500 | Narrow, high citations | ✅ Pass | Returned YOLOv7 (2023, 10657 cit.). Directly on-topic, all constraints met. |
 | 4 | Political Science | in 2018 | 100 | Broad, exact year | ⚠️ Partial | Returned a 2018 paper on misinformation spread (8172 cit.). Year and citation constraints met but the topic is adjacent to political science rather than a direct match. |
@@ -98,7 +100,3 @@ For each test the conclusion notes whether the agent found a relevant paper, res
 **How did you prevent incorrect answers:** Three mechanisms work together. First, all paper data (title, year, citations, DOI, abstract) is returned by the tool and the LLM is instructed never to use values it did not receive from the tool results. Second, the tool applies year and citation filters at the API level, so no out-of-range paper reaches the model. Third, the system prompt instructs the agent to reject a paper if it has to argue why it is related, and to output a fixed "No paper was found" string when nothing qualifies which the termination condition and output parser both detect cleanly.
 
 **What would I improve with more time:** Firstly, the most impactful change would be switching to a stronger model with better instruction-following and relevance judgment. Secondly, returning a relevance score alongside each paper from the tool (based on how many query terms match and where) would give the model a clearer signal for ranking candidates.
-
-## Author
-
-Nikolaj Vølver
