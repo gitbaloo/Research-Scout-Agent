@@ -1,0 +1,134 @@
+[
+  {
+    "test_id": 1,
+    "group": "Prompt 1 \u2014 detailed search",
+    "params": [
+      "Geology",
+      "before",
+      2020,
+      200
+    ],
+    "prompt": "Find a research paper about Geology that was published before 2020 and has at least 200 citations. Explain why the paper is relevant and provide the source of the citation count.",
+    "output": "Title: The continental crust: Its composition and evolution\nAuthors: Stuart Ross Taylor, S. M. McLennan\nYear: 1985\nCitations: 11123 (source: Google Scholar)\nLink: None provided\nWhy this paper: This paper is directly about the composition and evolution of the continental crust, which is a core topic in geology. It was published before 2020 and has over 200 citations, making it a relevant and influential work in the field."
+  },
+  {
+    "test_id": 2,
+    "group": "Prompt 1 \u2014 detailed search",
+    "params": [
+      "Keynesian Economics",
+      "before",
+      2026,
+      50
+    ],
+    "prompt": "Find a research paper about Keynesian Economics that was published before 2026 and has at least 50 citations. Explain why the paper is relevant and provide the source of the citation count.",
+    "output": "Title: The Affluent Society\nAuthors: John Kenneth Galbraith\nYear: 1958\nCitations: 1981 (source: OpenAlex)\nLink: https://doi.org/10.1007/978-94-017-3411-8\nWhy this paper: This paper is directly about Keynesian economics, as John Kenneth Galbraith was a prominent Keynesian economist. The book challenges conventional economic thought and discusses the role of government in a modern economy, which are key themes in Keynesian economics."
+  },
+  {
+    "test_id": 3,
+    "group": "Prompt 1 \u2014 detailed search",
+    "params": [
+      "Computer vision object detection",
+      "after",
+      2022,
+      500
+    ],
+    "prompt": "Find a research paper about Computer vision object detection that was published after 2022 and has at least 500 citations. Explain why the paper is relevant and provide the source of the citation count.",
+    "output": "Title: YOLOv7: Trainable Bag-of-Freebies Sets New State-of-the-Art for Real-Time Object Detectors\nAuthors: Chien-Yao Wang, Alexey Bochkovskiy, Hong-Yuan Mark Liao\nYear: 2023\nCitations: 10657 (source: OpenAlex)\nLink: https://doi.org/10.1109/cvpr52729.2023.00721\nWhy this paper: This paper introduces YOLOv7, a real-time object detection model that sets a new state-of-the-art for both speed and accuracy. The paper describes the trainable bag-of-freebies approach used in YOLOv7, which combines flexible and efficient tools proposed in the compound scaling method. The model surpasses all known detectors in terms of speed and accuracy, ranging from 5 FPS to 120 FPS, and has the highest 56.8% AP among real-time detectors with 30 or higher on a GPU V100. The source code for YOLOv7 is released on GitHub."
+  },
+  {
+    "test_id": 4,
+    "group": "Prompt 1 \u2014 detailed search",
+    "params": [
+      "Political Science",
+      "in",
+      2018,
+      100
+    ],
+    "prompt": "Find a research paper about Political Science that was published in 2018 and has at least 100 citations. Explain why the paper is relevant and provide the source of the citation count.",
+    "output": "Title: The spread of true and false news online\nAuthors: Soroush Vosoughi, Deb Roy, Sinan Aral\nYear: 2018\nCitations: 8172 (source: OpenAlex)\nLink: https://doi.org/10.1126/science.aap9559\nWhy this paper: This paper directly studies the spread of false news, which is a key aspect of political science. It was published in 2018 and has over 8000 citations, making it a highly relevant and influential work in the field."
+  },
+  {
+    "test_id": 5,
+    "group": "Prompt 1 \u2014 detailed search",
+    "params": [
+      "Geothermics of Iceland",
+      "after",
+      2000,
+      30
+    ],
+    "prompt": "Find a research paper about Geothermics of Iceland that was published after 2000 and has at least 30 citations. Explain why the paper is relevant and provide the source of the citation count.",
+    "output": "Title: Utilizing supercritical geothermal systems: a review of past ventures and ongoing research activities\nAuthors: Thomas Reinsch, Patrick Dobson, Hiroshi Asanuma, Ernst Huenges, Fl\u00e1vio Poletto, Bernard Sanjuan\nYear: 2017\nCitations: 221 (source: OpenAlex)\nLink: https://doi.org/10.1186/s40517-017-0075-y\nWhy this paper: This paper provides a comprehensive review of supercritical geothermal systems, which are a type of unconventional geothermal resource with high enthalpy fluids. The paper discusses the potential of these systems as an energy resource and outlines the challenges and opportunities for their utilization. The paper is relevant to the topic of geothermics in Iceland as it discusses specific case studies in Iceland, including the Krafla and Reykjanes peninsula geothermal systems. The paper also highlights the importance of international collaboration in the research and development of these systems, which is a key aspect of geothermal energy research in Iceland."
+  },
+  {
+    "test_id": 6,
+    "group": "Prompt 1 \u2014 detailed search",
+    "params": [
+      "AI alignment",
+      "after",
+      2025,
+      10000
+    ],
+    "prompt": "Find a research paper about AI alignment that was published after 2025 and has at least 10000 citations. Explain why the paper is relevant and provide the source of the citation count.",
+    "output": "No paper was found that satisfies all constraints."
+  },
+  {
+    "test_id": 7,
+    "group": "Prompt 2 \u2014 quick search",
+    "params": [
+      "Geology",
+      "a civil engineer designing infrastructure"
+    ],
+    "prompt": "Find a recent paper about Geology and explain whether it would be useful for a civil engineer designing infrastructure.",
+    "output": "Title: SoilGrids 2.0: producing soil information for the globe with quantified spatial uncertainty\nAuthors: Laura Poggio, Lu\u00eds Moreira de Sousa, N.H. Batjes, G.B.M. Heuvelink, Bas Kempen, Eloi Ribeiro, David G. Rossiter\nYear: 2021\nCitations: 1961 (source: OpenAlex)\nLink: https://doi.org/10.5194/soil-7-217-2021\nWhy this paper: This paper presents a global dataset of soil properties, including geology-derived information, with quantified spatial uncertainty. For a civil engineer designing infrastructure, understanding soil properties and their uncertainties is crucial for site selection, foundation design, and risk assessment. The paper provides a comprehensive resource that can aid in these aspects, making it highly relevant and useful."
+  },
+  {
+    "test_id": 8,
+    "group": "Prompt 2 \u2014 quick search",
+    "params": [
+      "Economics",
+      "a physicist"
+    ],
+    "prompt": "Find a recent paper about Economics and explain whether it would be useful for a physicist.",
+    "output": "Title: Input-Output Analysis : Foundations and Extensions\nAuthors: Ronald E. Miller, Peter D. Blair\nYear: 2021\nCitations: 5118 (source: OpenAlex)\nLink: https://doi.org/10.1017/9781108676212\nWhy this paper: This paper is about input-output analysis, a method used in economics to model the interdependencies of industries in an economy. While it's primarily an economics paper, it could be useful for a physicist in several ways. First, the principles of input-output analysis can be applied to study complex systems, which is a common topic in physics. Second, the methods described in the paper could be used to analyze the energy flows and dependencies in a physical system, providing insights into its behavior and dynamics. Finally, the paper's focus on data-driven modeling and analysis could inspire physicists to apply similar approaches to their own research."
+  },
+  {
+    "test_id": 9,
+    "group": "Prompt 2 \u2014 quick search",
+    "params": [
+      "Computer science",
+      "a university lecturer"
+    ],
+    "prompt": "Find a recent paper about Computer science and explain whether it would be useful for a university lecturer.",
+    "output": "**Title:** A Survey of Convolutional Neural Networks: Analysis, Applications, and Prospects\n**Authors:** Zewen Li, Fan Liu, Wenjie Yang, Shouheng Peng, Jun Zhou\n**Year:** 2021\n**Citations:** 4686 (source: OpenAlex)\n**Link:** https://doi.org/10.1109/tnnls.2021.3084827\n**Why this paper:** This paper provides a comprehensive survey of Convolutional Neural Networks (CNNs), their applications, and future prospects. It covers various types of convolutions, classic and advanced models, and offers guidelines for function and hyperparameter selection. As a university lecturer in computer science, this paper would be useful for staying updated on the latest developments and best practices in CNNs, a crucial topic in the field of deep learning."
+  },
+  {
+    "test_id": 10,
+    "group": "Prompt 2 \u2014 quick search",
+    "params": [
+      "Anarcho-Capitalism and decentralized governance",
+      "a political theorist"
+    ],
+    "prompt": "Find a recent paper about Anarcho-Capitalism and decentralized governance and explain whether it would be useful for a political theorist.",
+    "output": "Title: Challenges and Approaches to Scaling the Global Commons\nAuthors: Felix Fritsch, Jeff Emmett, Emaline Friedman, Rok Kranjc, Sarah Manski, Michael Zargham, Michel Bauwens\nYear: 2021\nCitations: 34 (source: OpenAlex)\nLink: https://doi.org/10.3389/fbloc.2021.578721\nWhy this paper: This paper discusses the scaling of global commons governance frameworks using Distributed Ledger Technologies (DLTs) like blockchain. It explores how these technologies can foster economies that limit speculation, emphasize use-value over exchange-value, and promote equity and responsibility. This is directly relevant to anarcho-capitalism and decentralized governance, making it useful for a political theorist studying these topics."
+  },
+  {
+    "test_id": 11,
+    "group": "Prompt 2 \u2014 quick search",
+    "params": [
+      "Computer vision object detection",
+      "a robotics engineer"
+    ],
+    "prompt": "Find a recent paper about Computer vision object detection and explain whether it would be useful for a robotics engineer.",
+    "output": "### Paper on Computer Vision Object Detection\n\nTitle: Swin Transformer: Hierarchical Vision Transformer using Shifted Windows\nAuthors: Ze Liu, Yutong Lin, Yue Cao, Han Hu, Yixuan Wei, Zheng Zhang, Stephen Lin, Baining Guo\nYear: 2021\nCitations: 29228 (source: OpenAlex)\nLink: https://doi.org/10.1109/iccv48922.2021.00986\nWhy this paper: This paper introduces Swin Transformer, a hierarchical vision transformer that uses shifted windows. It's a general-purpose backbone for computer vision, including object detection, with a top-1 accuracy of 87.3% on ImageNet-1K and a box AP of 58.7 on COCO test-dev. This is a significant development in the field of computer vision object detection, and it would be useful for a robotics engineer to understand the latest advancements in this area."
+  },
+  {
+    "test_id": 12,
+    "group": "Prompt 2 \u2014 quick search",
+    "params": [
+      "Linguistics",
+      "a data scientist working with social networks"
+    ],
+    "prompt": "Find a recent paper about Linguistics and explain whether it would be useful for a data scientist working with social networks.",
+    "output": "Title: mT5: A Massively Multilingual Pre-trained Text-to-Text Transformer\nAuthors: Linting Xue, Noah Constant, Adam P. Roberts, Mihir Kale, Rami Al\u2010Rfou, Aditya Siddhant, Aditya Barua, Colin Raffel\nYear: 2021\nCitations: 1530 (source: OpenAlex)\nLink: https://doi.org/10.18653/v1/2021.naacl-main.41\nWhy this paper: This paper introduces mT5, a multilingual pre-trained text-to-text transformer that can generate text in multiple languages. For a data scientist working with social networks, understanding and being able to generate text in different languages can be crucial for analyzing and engaging with diverse user bases. This paper provides a valuable tool for achieving this."
+  }
+]
